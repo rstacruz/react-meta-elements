@@ -1,6 +1,20 @@
-# react-meta-elements
+<p align='center'>
+<br><img src='https://user-images.githubusercontent.com/74385/56846007-04051500-68fc-11e9-9d40-a6f85a1943e5.png' width='160'><br>
+</p>
 
+<h1 align='center'>
+react-meta-elements
+</h1>
+
+<p align='center'>
 Sets document title and meta tags using React elements or hooks. A lightweight alternative to React Helmet.
+</p>
+
+<p align='center'>
+<img src='https://img.shields.io/badge/build-pending-lightgrey.svg'>
+</p>
+
+<br>
 
 ## Usage
 
@@ -49,7 +63,6 @@ react-meta-elements is similar to other packages, but in general, it tries to ke
 <td valign='top'>
 
 <!-- prettier-ignore -->
-
 ```html
 <Title>title here</Title>
 
@@ -63,7 +76,6 @@ react-meta-elements is similar to other packages, but in general, it tries to ke
 <td valign='top'>
 
 <!-- prettier-ignore -->
-
 ```html
 <Helmet>
   <title>title here</title>
@@ -77,12 +89,8 @@ react-meta-elements is similar to other packages, but in general, it tries to ke
 Alternate syntax:
 
 ```html
-<Helmet title='title here' meta={[
-  {
-    name: 'description',
-    content: 'This is a description'
-  }
-]} />
+<Helmet title='title here' meta={[ { name: 'description', content: 'This is a
+description' } ]} />
 ```
 
 </td>
@@ -91,9 +99,7 @@ Alternate syntax:
 ```js
 <HeadProvider>
   <Title>title here</Title>
-  <Meta
-    name='description'
-    content='This is a description' />
+  <Meta name='description' content='This is a description' />
 </HeadProvider>
 ```
 
@@ -101,7 +107,6 @@ Alternate syntax:
 <td valign='top'>
 
 <!-- prettier-ignore -->
-
 ```js
 <HeadProvider headTags={[]}>
   <MetaTags>
@@ -127,3 +132,18 @@ Alternate syntax:
 [helmet]: https://yarn.pm/react-helmet
 [react-head]: https://yarn.pm/react-head
 [penpad]: https://github.com/rstacruz/penpad
+
+## Thanks
+
+**react-meta-elements** © 2019, Rico Sta. Cruz. Released under the [MIT] License.<br>
+Authored and maintained by Rico Sta. Cruz with help from contributors ([list][contributors]).
+
+> [ricostacruz.com](http://ricostacruz.com) &nbsp;&middot;&nbsp;
+> GitHub [@rstacruz](https://github.com/rstacruz) &nbsp;&middot;&nbsp;
+> Twitter [@rstacruz](https://twitter.com/rstacruz)
+
+[![](https://img.shields.io/github/followers/rstacruz.svg?style=social&label=@rstacruz)](https://github.com/rstacruz) &nbsp;
+[![](https://img.shields.io/twitter/follow/rstacruz.svg?style=social&label=@rstacruz)](https://twitter.com/rstacruz)
+
+[mit]: http://mit-license.org/
+[contributors]: http://github.com/rstacruz/react-meta-elements/contributors

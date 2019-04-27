@@ -13,6 +13,7 @@
   ],
   "scripts": {
     "prepare": "rollup --config",
+    "postprepare": "mv dist/src/index.d.ts dist; rm -rf dist/src dist/tests",
     "tsc": "tsc",
     "jest": "jest"
   },

@@ -144,4 +144,4 @@ const Link = (props: LinkProps) => {
  * Export
  */
 
-export { useTitle, useMeta, Title, Meta }
+export { useTitle, useMeta, useLink, Title, Meta, Link }
