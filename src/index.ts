@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
+import nodeToString from './utilities/nodeToString'
 
 export interface TitleProps {
-  title: string
+  title?: string
+  children?: React.ReactNode
 }
 
 export interface MetaProps {
@@ -14,8 +16,9 @@ export interface MetaProps {
  * React hook to set the document title.
  */
 
-const useTitle = (title: string) => {
+const useTitle = (title: string | null | undefined) => {
   useEffect(() => {
+    if (title == null) return
     const oldTitle = document.title
     document.title = title
     return () => {
@@ -92,7 +95,11 @@ const spawnMetaElement = () => {
  */
 
 const Title = (props: TitleProps) => {
-  useTitle(props.title)
+  if (props.title != null) {
+    useTitle(props.title)
+  } else {
+    useTitle(nodeToString(props.children))
+  }
   return null
 }
 

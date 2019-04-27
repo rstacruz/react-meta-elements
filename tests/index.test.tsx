@@ -31,6 +31,11 @@ describe('Title', () => {
     expect(document.title).toEqual('hello')
   })
 
+  it('supports children', () => {
+    const co = render(<Title>hello</Title>)
+    expect(document.title).toEqual('hello')
+  })
+
   it('falls back to old title when unmounted', () => {
     document.title = 'previous title'
 
