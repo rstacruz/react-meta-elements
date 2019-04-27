@@ -11,7 +11,7 @@ react-meta-elements
 </h1>
 
 <p align='center'>
-Sets document title and meta tags using React elements or hooks. A lightweight alternative to React Helmet.
+Sets document title and meta tags using React elements or hooks. A lightweight alternative to React Helmet. **No server-side rendering (SSR) support (yet!).**
 </p>
 
 <p align='center'>
