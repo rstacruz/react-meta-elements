@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import nodeToString from './utilities/nodeToString'
+import spawnHeadElement from './utilities/spawnHeadElement'
+import setOrRemoveAttribute from './utilities/setOrRemoveAttribute'
 
 export interface TitleProps {
   title?: string
@@ -10,6 +12,19 @@ export interface MetaProps {
   name?: string | undefined
   property?: string | undefined
   content: string
+}
+
+export interface LinkProps {
+  as?: string | null | undefined
+  crossorigin?: string | null | undefined
+  useCredentials?: string | null | undefined
+  href?: string | null | undefined
+  hreflang?: string | null | undefined
+  media?: string | null | undefined
+  rel?: string | null | undefined
+  sizes?: string | null | undefined
+  title?: string | null | undefined
+  type?: string | null | undefined
 }
 
 /**
@@ -32,62 +47,64 @@ const useTitle = (title: string | null | undefined) => {
  */
 
 const useMeta = (props: MetaProps) => {
-  const { property, name, content } = props
+  return useHeadElement(props, 'meta', [
+    'charset',
+    'content',
+    'httpEquiv',
+    'name',
+    'property'
+  ])
+}
+
+const useLink = (props: LinkProps) => {
+  return useHeadElement(props, 'link', [
+    'as',
+    'crossorigin',
+    'useCredentials',
+    'rel',
+    'href',
+    'hreflang',
+    'media',
+    'rel',
+    'sizes',
+    'title',
+    'type'
+  ])
+}
+
+/**
+ * React hook to insert an arbitrary head element.
+ */
+
+const useHeadElement = (
+  props: { [key: string]: any },
+  name: string,
+  attributes: string[]
+) => {
   const [element, setElement] = useState<HTMLElement | null>(null)
 
   useEffect(() => {
     let el: HTMLElement
 
+    // Spawn the element if it hasn't been yet
     if (!element) {
-      el = spawnMetaElement()
+      el = spawnHeadElement(name)
       setElement(el)
     } else {
       el = element
     }
 
-    // Set element's attributes
-    setOrRemoveAttribute(el, 'property', property)
-    setOrRemoveAttribute(el, 'name', name)
-    setOrRemoveAttribute(el, 'content', content)
+    // Set element's attributes via
+    // set(el, 'content', props.content)
+    attributes.forEach((attrib: string) => {
+      setOrRemoveAttribute(el, attrib, props[attrib])
+    })
 
+    // Cleanup by removing the spawned element
     return () => {
       if (el && el.parentNode) el.parentNode.removeChild(el)
     }
-  }, [property, name, content])
-}
-
-/**
- * If `value` is given, sets an attribute. If it's null'ish, the attribute is removed.
- * @private
- */
-
-const setOrRemoveAttribute = (
-  el: HTMLElement,
-  name: string,
-  value: string | null | undefined
-) => {
-  if (value) {
-    el.setAttribute(name, value)
-  } else {
-    el.removeAttribute(name)
-  }
-}
-
-/**
- * Create a `<meta>` element and append it to the head.
- * @private
- */
-
-const spawnMetaElement = () => {
-  // Create the element
-  const el = document.createElement('meta')
-
-  // Append into <head>
-  const heads = document.getElementsByTagName('head')
-  const head = heads && heads[0]
-  if (head) head.appendChild(el)
-
-  return el
+  }, [JSON.stringify(props)])
 }
 
 /**
@@ -109,6 +126,15 @@ const Title = (props: TitleProps) => {
 
 const Meta = (props: MetaProps) => {
   useMeta(props)
+  return null
+}
+
+/**
+ * Component version of useLink.
+ */
+
+const Link = (props: LinkProps) => {
+  useLink(props)
   return null
 }
 

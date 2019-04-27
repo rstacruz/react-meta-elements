@@ -4,7 +4,7 @@ Sets document title and meta tags using React elements or hooks. A lightweight a
 
 ## Usage
 
-This package exposes `Title` and `Meta` components. Use them in the same way you would use their respective HTML elements; they will automatically be mounted onto `document.head`.
+This package exposes `Title`, `Meta` and `Link` components. Use them in the same way you would use their respective HTML elements; they will automatically be mounted onto `document.head`.
 
 ```js
 import { Title, Meta } from 'react-head'
@@ -28,6 +28,8 @@ const MyComponent = () => {
 <Title>title here</Title>
 <Meta name='description' content='This is a description' />
 <Meta property='og:description' content='This is a description' />
+
+<Link rel='canonical' content='https://google.com/' />
 ```
 
 ## Prior art

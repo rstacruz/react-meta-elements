@@ -49,12 +49,16 @@ describe('Title', () => {
 
     // Show
     const show = co.getByTestId('button:show')
-    act(() => { fireEvent.click(show) })
+    act(() => {
+      fireEvent.click(show)
+    })
     expect(document.title).toEqual('new title')
 
     // Hide
     const hide = co.getByTestId('button:hide')
-    act(() => { fireEvent.click(hide) })
+    act(() => {
+      fireEvent.click(hide)
+    })
     expect(document.title).toEqual('previous title')
   })
 })
