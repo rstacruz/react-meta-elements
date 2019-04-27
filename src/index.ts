@@ -9,9 +9,11 @@ export interface TitleProps {
 }
 
 export interface MetaProps {
-  name?: string | undefined
-  property?: string | undefined
+  charset?: string | null | undefined
   content: string
+  httpEquiv?: string | null | undefined
+  name?: string | null | undefined
+  property?: string | null | undefined
 }
 
 export interface LinkProps {
