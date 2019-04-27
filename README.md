@@ -88,9 +88,15 @@ react-meta-elements is similar to other packages, but in general, it tries to ke
 
 Alternate syntax:
 
+<!-- prettier-ignore -->
 ```html
-<Helmet title='title here' meta={[ { name: 'description', content: 'This is a
-description' } ]} />
+<Helmet
+  title='title here'
+  meta={[
+    { name: 'description',
+      content: 'This is a description' }
+  ]}
+/>
 ```
 
 </td>
