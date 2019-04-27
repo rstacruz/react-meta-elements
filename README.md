@@ -16,6 +16,8 @@ Sets document title and meta tags using React elements or hooks. A lightweight a
 
 <p align='center'>
 <img src='https://img.shields.io/badge/build-pending-lightgrey.svg'>
+<img src='https://img.shields.io/bundlephobia/minzip/react-meta-elements.svg'>
+<img src='https://img.shields.io/npm/v/react-meta-elements.svg'>
 </p>
 
 <br>
@@ -151,6 +153,12 @@ Alternate syntax:
 
 </td>
 </tr>
+
+<tr>
+<td><img src='https://img.shields.io/bundlephobia/minzip/react-meta-elements.svg'></td>
+<td><img src='https://img.shields.io/bundlephobia/minzip/react-helmet.svg'></td>
+<td><img src='https://img.shields.io/bundlephobia/minzip/react-head.svg'></td>
+<td><img src='https://img.shields.io/bundlephobia/minzip/react-meta-tags.svg'></td>
 </table>
 
 - [Helmet]: Helmet is a full-featured head tag manager. At time of writing, you need to use v6 (beta) to make it work in a project with React hooks, which is incompatible with the stable v5.
