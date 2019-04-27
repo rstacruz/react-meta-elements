@@ -7,10 +7,8 @@
     "strict": true,
     "esModuleInterop": true,
     "declaration": true,
-    "baseUrl": "./",
-    "outDir": "dist/"
-  },
-  "includes": [
-    "src/"
-  ]
+    "baseUrl": "src/",
+    "outDir": "dist/",
+    "jsx": "react"
+  }
 }
