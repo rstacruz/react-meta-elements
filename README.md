@@ -91,7 +91,9 @@ Alternate syntax:
 ```js
 <HeadProvider>
   <Title>title here</Title>
-  <Meta name='description' content='This is a description' />
+  <Meta
+    name='description'
+    content='This is a description' />
 </HeadProvider>
 ```
 
@@ -115,8 +117,6 @@ Alternate syntax:
 </td>
 </tr>
 </table>
-
-react-meta-elements is not the first package to let you manage Title and Meta elements. There are other alternatives you can consider:
 
 - [Helmet]: Helmet is a full-featured head tag manager. At time of writing, you need to use v6 (beta) to make it work in a project with React hooks, which is incompatible with the stable v5.
 
