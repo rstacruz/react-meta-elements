@@ -1,5 +1,9 @@
 <p align='center'>
-<br><img src='https://user-images.githubusercontent.com/74385/56846007-04051500-68fc-11e9-9d40-a6f85a1943e5.png' width='160'><br>
+<br>
+<a href='https://thenounproject.com/search/?q=meta&i=972404'>
+<img src='https://user-images.githubusercontent.com/74385/56846007-04051500-68fc-11e9-9d40-a6f85a1943e5.png' width='160' alt='Icon by Shmidt Sergey from The Noun Project'>
+</a>
+<br>
 </p>
 
 <h1 align='center'>
