@@ -39,15 +39,30 @@ const MyComponent = () => {
 
 ## More examples
 
+```html
+<title>title here</title>
+<title title="title here" />
+
+<title>title here</title>
+<meta name="description" content="This is a description" />
+<meta property="og:description" content="This is a description" />
+
+<link rel="canonical" content="https://google.com/" />
+```
+
+## React hooks API
+
+Hook versions are available via `useTitle`, `useMeta` and `useLink`.
+
 ```js
-<Title>title here</Title>
-<Title title='title here' />
+import { useTitle, useMeta } from 'react-meta-elements'
 
-<Title>title here</Title>
-<Meta name='description' content='This is a description' />
-<Meta property='og:description' content='This is a description' />
+const MyComponent = () => {
+  useTitle('My title here')
+  useMeta({ name: 'description', content: 'My description' })
 
-<Link rel='canonical' content='https://google.com/' />
+  return <span>...</span>
+}
 ```
 
 ## Prior art
