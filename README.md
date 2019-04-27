@@ -102,10 +102,14 @@ Alternate syntax:
 </td>
 <td valign='top'>
 
+<!-- prettier-ignore -->
 ```js
 <HeadProvider>
   <Title>title here</Title>
-  <Meta name='description' content='This is a description' />
+  <Meta
+    name='description'
+    content='This is a description'
+  />
 </HeadProvider>
 ```
 
