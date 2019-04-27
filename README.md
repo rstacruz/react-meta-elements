@@ -27,13 +27,14 @@ Sets document title and meta tags using React elements or hooks. A lightweight a
 This package exposes `Title`, `Meta` and `Link` components. Use them in the same way you would use their respective HTML elements; they will automatically be mounted onto `document.head`.
 
 ```js
-import { Title, Meta } from 'react-meta-elements'
+import { Title, Meta, Link } from 'react-meta-elements'
 
 const MyComponent = () => {
   return (
     <>
       <Title>Hello world!</Title>
       <Meta name='description' content='This is a description' />
+      <Link rel='canonical' href='https://github.com/' />
     </>
   )
 }
@@ -41,15 +42,18 @@ const MyComponent = () => {
 
 ## More examples
 
+<!-- prettier-ignore -->
 ```html
-<title>title here</title>
-<title title="title here" />
+<!-- Title -->
+<Title>title here</Title>
+<Title title="title here" />
 
-<title>title here</title>
-<meta name="description" content="This is a description" />
-<meta property="og:description" content="This is a description" />
+<!-- Meta -->
+<Meta name="description" content="This is a description" />
+<Meta property="og:description" content="This is a description" />
 
-<link rel="canonical" content="https://google.com/" />
+<!-- Link -->
+<Link rel="canonical" content="https://google.com/" />
 ```
 
 ## React hooks API
