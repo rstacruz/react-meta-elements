@@ -95,6 +95,19 @@ react-meta-elements is similar to other packages, but in general, it tries to ke
 <td valign='top'>
 
 <!-- prettier-ignore -->
+```jsx
+<Helmet
+  title='title here'
+  meta={[
+    { name: 'description',
+      content: 'This is a description' }
+  ]}
+/>
+```
+
+Alternate syntax:
+
+<!-- prettier-ignore -->
 ```html
 <Helmet>
   <title>title here</title>
@@ -105,24 +118,12 @@ react-meta-elements is similar to other packages, but in general, it tries to ke
 </Helmet>
 ```
 
-Alternate syntax:
-
-<!-- prettier-ignore -->
-```html
-<Helmet
-  title='title here'
-  meta={[
-    { name: 'description',
-      content: 'This is a description' }
-  ]}
-/>
-```
 
 </td>
 <td valign='top'>
 
 <!-- prettier-ignore -->
-```js
+```jsx
 <HeadProvider>
   <Title>title here</Title>
   <Meta
@@ -136,7 +137,7 @@ Alternate syntax:
 <td valign='top'>
 
 <!-- prettier-ignore -->
-```js
+```jsx
 <HeadProvider headTags={[]}>
   <MetaTags>
     <title>title here</title>
