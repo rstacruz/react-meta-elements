@@ -2,7 +2,7 @@
   "name": "react-meta-elements",
   "description": "Manage title and meta tags in React",
   "author": "Rico Sta. Cruz <rstacruz@users.noreply.github.com>",
-  "version": "0.3.0-alpha.1",
+  "version": "1.0.0",
   "main": "dist/index.umd.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
