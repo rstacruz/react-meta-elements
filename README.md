@@ -21,7 +21,7 @@ Sets document title and meta tags using React elements or hooks. A lightweight a
 This package exposes `Title`, `Meta` and `Link` components. Use them in the same way you would use their respective HTML elements; they will automatically be mounted onto `document.head`.
 
 ```js
-import { Title, Meta } from 'react-head'
+import { Title, Meta } from 'react-meta-elements'
 
 const MyComponent = () => {
   return (
